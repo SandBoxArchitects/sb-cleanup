@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cleanup Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="container" class="container">
+        <div class="header">
+            <h1><i class="fas fa-trash-alt icon"></i> Cleanup Menu</h1>
+            <div class="close" id="close"><i class="fas fa-times"></i></div>
+        </div>
+        
+        <div class="menu" id="main">
+            <div class="item" data-event="vehicles">
+                <div class="item-icon"><i class="fas fa-car"></i></div>
+                <span>Vehicles</span>
+                <div class="arrow"><i class="fas fa-chevron-right"></i></div>
+            </div>
+            <div class="item" data-event="peds">
+                <div class="item-icon"><i class="fas fa-user"></i></div>
+                <span>Peds</span>
+                <div class="arrow"><i class="fas fa-chevron-right"></i></div>
+            </div>
+            <div class="item" data-event="props">
+                <div class="item-icon"><i class="fas fa-cube"></i></div>
+                <span>Props</span>
+                <div class="arrow"><i class="fas fa-chevron-right"></i></div>
+            </div>
+        </div>
+        
+        <div class="panel" id="vehicles">
+            <div class="back" data-menu="main"><i class="fas fa-arrow-left"></i> Back</div>
+            <h2 class="title"><i class="fas fa-car icon"></i> Vehicle Options</h2>
+            <div class="item" data-action="all" data-type="vehicle">
+                <div class="item-icon"><i class="fas fa-trash"></i></div>
+                <span>Delete All Vehicles</span>
+            </div>
+            <div class="item" data-action="empty" data-type="vehicle">
+                <div class="item-icon"><i class="fas fa-car-side"></i></div>
+                <span>Delete Empty Vehicles</span>
+            </div>
+            <div class="item" data-action="distance" data-type="vehicle">
+                <div class="item-icon"><i class="fas fa-ruler-combined"></i></div>
+                <span>Delete Nearby Vehicles</span>
+            </div>
+        </div>
+        
+        <div class="panel" id="peds">
+            <div class="back" data-menu="main"><i class="fas fa-arrow-left"></i> Back</div>
+            <h2 class="title"><i class="fas fa-user icon"></i> Ped Options</h2>
+            <div class="item" data-action="all" data-type="ped">
+                <div class="item-icon"><i class="fas fa-trash"></i></div>
+                <span>Delete All Peds</span>
+            </div>
+            <div class="item" data-action="distance" data-type="ped">
+                <div class="item-icon"><i class="fas fa-ruler-combined"></i></div>
+                <span>Delete Nearby Peds</span>
+            </div>
+        </div>
+        
+        <div class="panel" id="props">
+            <div class="back" data-menu="main"><i class="fas fa-arrow-left"></i> Back</div>
+            <h2 class="title"><i class="fas fa-cube icon"></i> Prop Options</h2>
+            <div class="item" data-action="all" data-type="prop">
+                <div class="item-icon"><i class="fas fa-trash"></i></div>
+                <span>Delete All Props</span>
+            </div>
+            <div class="item" data-action="distance" data-type="prop">
+                <div class="item-icon"><i class="fas fa-ruler-combined"></i></div>
+                <span>Delete Nearby Props</span>
+            </div>
+        </div>
+        
+        <div class="panel" id="distance">
+            <div class="back" data-menu="previous"><i class="fas fa-arrow-left"></i> Back</div>
+            <h2 class="title"><i class="fas fa-ruler-combined icon"></i> Set Distance</h2>
+            <div class="input-group">
+                <input type="number" id="distance-value" placeholder="Distance in meters" value="50">
+                <span class="unit">m</span>
+            </div>
+            <div class="checkbox" id="empty-check" style="display:none">
+                <input type="checkbox" id="empty-only">
+                <label for="empty-only">Empty vehicles only</label>
+            </div>
+            <button id="confirm" class="btn btn-primary"><i class="fas fa-check"></i> Confirm</button>
+        </div>
+        
+        <div class="panel" id="confirm-dialog">
+            <div class="confirm-icon"><i class="fas fa-exclamation-triangle"></i></div>
+            <h2>Confirm Deletion</h2>
+            <p id="message"></p>
+            <div class="btn-group">
+                <button id="cancel" class="btn btn-cancel"><i class="fas fa-times"></i> Cancel</button>
+                <button id="delete" class="btn btn-danger"><i class="fas fa-trash"></i> Delete</button>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

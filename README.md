@@ -6,8 +6,9 @@ A comprehensive admin cleanup menu for QBCore servers that allows administrators
 
 ## Dev Team
 
-![os.515](https://github.com/OsamaDev-Jo)
-![Xt_l](https://github.com/Xtl5m)
+[os.515](https://github.com/OsamaDev-Jo)
+
+[Xt_l](https://github.com/Xtl5m)
 
 ## Features
 
